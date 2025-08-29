@@ -10,11 +10,15 @@
   "keywords": [
     "body",
     "Query",
-    "SENAI"
+    "SENAI",
+    "API",
+    "Nodemon",
+    "Node.js",
+    "Express"
   ],
   "author": "Vitor Nunes",
   "license": "MIT",
-  "description": "Projeto de API com body e query",
+  "description": "Projeto de API com filtro body e query",
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
