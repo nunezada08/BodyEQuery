@@ -91,7 +91,28 @@ app.get('/animais', (req, res) => {
     });
 });
 
+app.post('/bruxos', (req, res) => {
+    const { casa, ano, especialidade, nome, varinha, mascote, patrono, vivo } = req.body;
+     if (!nome || !casa) {
+      res.status(400).json ({
+        sucess:false,
+        message: "Nome e casa são obrigatorios para um bruxo",
+      });
+     }
 
+     const novoBruxo = {
+      id: bruxos.length + 1,
+      nome,
+      casa: casa,
+      ano: parseInt(ano),
+      varinha: varinha,
+      mascote,
+      patrono,
+      especialidade: especialidade || "ainda nao atribuido",
+      vivo: vivo
+     }
+
+});
 
 
 app.listen(serverPort, () => {
